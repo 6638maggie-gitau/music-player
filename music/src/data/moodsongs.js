@@ -1,22 +1,22 @@
 const moodsongs ={
     sunset:[
-        {id: 1, title:"Rush", artist: "Arya Starr ",audio: "/songs/rush.mp3"},
-            { id: 1, title:"Calm Down", artist:"Rema", audio:"/songs/calmdown.mp3"},
+        {id: 1, title:"All The Best", artist: "Ejay Ivan Lac ",audio: "/songs/allthebest.mp3"},
+            { id: 1, title:"Let The Sunshine In", artist:"Dreadpool", audio:"/songs/letthesunshinein.mp3"},
     ],
 
     laughs:[
-        {id: 3, title:"Charm", artist:"Rema", audio:"/songs/charm.mp3"},
-        {id: 4,title:"Bloody Samaritan", artist:"Arya Starr" ,audio:"/songs/bloodysamaritan.mp3"},
+        {id: 3, title:"Force", artist:"Wordssmith", audio:"/songs/force.mp3"},
+        {id: 4,title:"Live It Up", artist:"Tom Orlando" ,audio:"/songs/liveitup.mp3"},
     ],
 
     dance:[
-    {id: 5, title:"Ozeba", artist:"Rema", audio:"/songs/ozaba.mp3"},
-    {id: 6, title:"Sability",artist:"Arya Starr", audio:"/songs/sability.mp3"},
+    {id: 5, title:" Water", artist:"Tyla", audio:"/songs/water.mp3"},
+    {id: 6, title:"You The Best",artist:"Young Redd", audio:"/songs/youthebest.mp3"},
     ],
 
     overthink:[
-        {id: 7, title:"Calm Down", artist:"Rema", audio:"/songs/calmdown.mp3"},
-        {id: 8, title:"All the Love", artist:"Ayra Starr", audio:"/songs/allthelove.mp3"},
+        {id: 7, title:"We Fading", artist:"Boulvard X Audi", audio:"/songs/wefading.mp3"},
+        {id: 8, title:"Deserve My Depression", artist:"Tom Orlando", audio:"/songs/deservemydepression.mp3"},
     ],
 }
 

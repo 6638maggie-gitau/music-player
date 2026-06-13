@@ -1,25 +1,34 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from "react";
 
-const MoodPlayer = ({ songs, favorites, toggleFavorite }) => {
+const MoodPlayer = ({ songs = [], favorites = [], toggleFavorite }) => {
   const audioRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const currentSong = songs[currentIndex];
-
-  const isFavorite =
-    favorites?.some((s) => s.id === currentSong?.id);
-
   // Reset index when songs change
   useEffect(() => {
-    setCurrentIndex(0);
+    if (songs.length > 0) {
+      setCurrentIndex(0);
+    }
   }, [songs]);
 
-  // Reload audio when song changes
-  useEffect(() => {
-    if (audioRef.current) {
-      audioRef.current.load();
-    }
-  }, [currentIndex]);
+
+  // Early return AFTER all hooks
+  if (!songs || songs.length === 0) {
+    return (
+      <div className="bg-gray-900 text-white p-6 rounded-xl mt-6">
+        <h1 className="text-xl font-bold">No songs available</h1>
+      </div>
+    );
+  }
+
+  const currentSong = songs[currentIndex] || songs[0];
+
+  console.log(JSON.stringify(currentSong, null, 2));
+console.log("Audio File:", currentSong?.audio);
+
+  const isFavorite = favorites.some(
+    (song) => song.id === currentSong?.id
+  );
 
   const playSong = () => {
     audioRef.current?.play();
@@ -30,20 +39,40 @@ const MoodPlayer = ({ songs, favorites, toggleFavorite }) => {
   };
 
   const prevSong = () => {
-    setCurrentIndex((prev) => (prev - 1 + songs.length) % songs.length);
+    setCurrentIndex(
+      (prev) => (prev - 1 + songs.length) % songs.length
+    );
   };
 
   return (
     <div className="bg-gray-900 text-white p-6 rounded-xl mt-6">
       <h2 className="text-2xl font-bold">{currentSong.title}</h2>
-      <p className="text-gray-400">{currentSong.artist}</p>
+
+      <p className="text-gray-400">
+        {currentSong.artist || "Unknown Artist"}
+      </p>
 
       <div className="flex gap-3 mt-4 items-center">
-        <button onClick={prevSong}>⏮</button>
+        <button
+          onClick={prevSong}
+          className="px-3 py-2 bg-gray-700 rounded hover:bg-gray-600"
+        >
+          ⏮
+        </button>
 
-        <button onClick={playSong}>▶</button>
+        <button
+          onClick={playSong}
+          className="px-3 py-2 bg-green-600 rounded hover:bg-green-500"
+        >
+          ▶
+        </button>
 
-        <button onClick={nextSong}>⏭</button>
+        <button
+          onClick={nextSong}
+          className="px-3 py-2 bg-gray-700 rounded hover:bg-gray-600"
+        >
+          ⏭
+        </button>
 
         <button
           onClick={() => toggleFavorite(currentSong)}
@@ -53,10 +82,15 @@ const MoodPlayer = ({ songs, favorites, toggleFavorite }) => {
         </button>
       </div>
 
-      <audio
-        ref={audioRef}
-        src={currentSong.audio}
-      />
+     <audio
+  key={currentSong.id}
+  ref={audioRef}
+  controls
+  src={currentSong.audio} 
+  className="w-full mt-4"
+>
+        Your browser does not support the audio element.
+      </audio>
     </div>
   );
 };

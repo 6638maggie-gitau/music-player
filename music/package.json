@@ -3,12 +3,16 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+
+  "homepage": "https://6638maggie-gitau.github.io/music-player",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy":"gh-pages -d dist"
   },
+  
   "dependencies": {
     "@tailwindcss/vite": "^4.3.0",
     "react": "^19.2.6",
