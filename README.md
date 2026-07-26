@@ -16,6 +16,7 @@ The app allows users to listen to songs, switch tracks, and save favorite songs 
 * React
 * JavaScript
 * Vite
+* CSS
   
 
 ## Running the App
