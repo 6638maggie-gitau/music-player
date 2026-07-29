@@ -9,7 +9,7 @@ The app allows users to listen to songs, switch tracks, and save favorite songs 
 * Next track functionality
 * Favorite songs section
 * Mood-based
-* Clean  simple interface
+* Clean and simple interface
 
 ## Tech Stack
 
