@@ -13,7 +13,7 @@ The app allows users to listen to songs, switch tracks, and save favorite songs 
 
 ## Tech Stack
 
-* React
+
 * JavaScript
 * Vite
 * CSS
