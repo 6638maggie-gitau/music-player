@@ -1,6 +1,6 @@
 # 🎧 Music Player
 
-This  is a simple music player built using React and Vite.
+This  is a simple music player built using React and .
 The app allows users to listen to songs, switch tracks, and save favorite songs depending on their mood.
 
 ## Features
