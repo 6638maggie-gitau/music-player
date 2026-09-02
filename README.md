@@ -5,7 +5,7 @@ The app allows users to listen to songs, switch tracks, and save favorite songs 
 
 ## Features
 
-* Play and pause songs
+* Play  pause songs
 * Next track functionality
 * Favorite songs section
 * Mood-based
