@@ -29,7 +29,7 @@ npm run dev
 
 ## Future Improvements
 
-* Add volume controls
+* Add volume 
 * Add shuffle feature
 * Improve UI design
 * Add music progress bar
