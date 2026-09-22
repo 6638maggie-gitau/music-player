@@ -12,8 +12,7 @@ The app allows users to listen to songs, switch tracks, and save favorite songs 
 * Clean and simple interface
 
 ## Tech Stack
-
-*React
+* React
 * JavaScript
 * Vite
 * CSS
